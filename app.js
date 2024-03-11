@@ -45,8 +45,7 @@ function copiartxt(){
     let texto = document.getElementById("txt-resultado").textContent;
     const copiarConenido = async () => {
         try {
-            await navigator.clipboard.writeText(texto);
-            console.log('contenido copiado');
+            await navigator.clipboard.writeText(texto);  
         } catch (err) {
             console.error("error al copiar:", err);
         }
