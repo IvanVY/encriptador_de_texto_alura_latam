@@ -133,6 +133,13 @@ main{
     text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+    .mensaje-referec {
+        margin-left: -15px;
+        text-align: center; /* Centrar el texto en dispositivos móviles */
+    }
+}
+
 .mensaje:focus{
     outline: none;
 }
