@@ -4,83 +4,100 @@
     font-size: 32px;
     font-weight: 400;
     line-height: 48px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #F3F5FC;
+}
+
+header{
+    color: white;
+    padding: 20px;
 }
 
 .logo{
-    padding-top: 40px;
-    margin-left: 40px;
-    gap: 40px;
+    position: absolute;
     width: 120px;
     height: 48px;
+    top: 40px;
+    left: 40px;
+    gap: 40px;
 }
 
 main{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
     margin-bottom: 50px;
     margin-left: 80px;
+    margin-top: 80px;
 }
 
 .seccion1{
-    width: 577px;
-    height: 48px;
-    margin-left: 220px;
-    margin-top: 50px;
+    flex: 1 1 300px;
+    max-width: 700px;
+    margin: 20px;
 }
 
 .text-area{
+    width: 100%;
+    height: 288px;
     border: none;
     color: #0A3871;
     text-transform: lowercase;
     resize: none;
+    font-family: Inter;
+    font-size: 24px;
 }
 
-.caja-btns-info{
-    padding-top: 120px;
-}
 
 .informacion{
+    position: relative;
     color: #495057;
-    font-size: 18px;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 100px;
 }
 
 .botones{
+    justify-content: space-between;
     display: flex;
-    margin-top: 18px;
 }
 
 .btn-encriptar{
+    flex: 1;
+    margin-right: 10px;
     background-color: #0A3871;
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: white;
     cursor: pointer;
-    height: 67px;
-    width: 328px;
 }
 
 .btn-desencriptar{
-    background-color: #D8DFE8;
+    flex: 1;
+    margin-right: 10px;
+    background-color: #ffffff;
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
-    height: 67px;
     margin-left: 30PX;
-    width: 328px;
 }
-
 
 .seccion2{
-    width: 577px;
-    height: 48px;
-    margin-left: 250px;
-    margin-top: 50px;
+    flex: 1 1 300px;
+    max-width: 400px;
+    margin: 20px;
 }
 
-.caja-mensaje{
-    box-shadow: 0px 24px 32px -8px #00000014;
-    height: 900px;
-}
 
 ::placeholder {color: #0A3871;}
     .text-area:focus {
@@ -91,21 +108,29 @@ main{
     background: white;
     background-image: url(img/Muñeco.png);
     background-repeat: no-repeat;
-    background-position: 0 55px;
+    background-position: center 50px;
     border: none;
     border-radius: 24px;
     color: #0A3871;
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px; 
+    margin-left: 6px;
+    top: 32px;
+    left: 9px; 
     resize: none;  
-    height: 330px; 
+    height: 410px;
+    width: 100%; 
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;    
 }
 
-.mensaje-refere{
+.mensaje-referec{
     width: 336px;
     height: 122px;
-    padding-left: 120px;
+    margin-left: 50px;
+    text-align: center;
 }
 
 .mensaje:focus{
@@ -119,7 +144,7 @@ main{
     line-height: 29px;
     letter-spacing: 0em;
     text-align: center;
-
+    margin: 0;
 }
 .txt2{
     font-family: Inter;
@@ -128,15 +153,43 @@ main{
     line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
-
 }
 .copiar{
+    width: 100%;
+    max-width: 328px;
+    margin-top: 26px;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
-    height: 67px;
-    margin-left: 108px;
-    margin-top: 210px;
-    width: 336px;
+}
+
+@media screen and (max-width: 768px) {
+    .seccion1,
+    .seccion2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Botones */
+.btn-encriptar,
+.btn-desencriptar,
+.copiar {
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Agregar transiciones suaves */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Agregar una sombra suave */
+}
+
+/* Botones en hover */
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.copiar:hover {
+    background-color: #863ff8; /* Cambiar el color de fondo al pasar el mouse */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Aumentar la sombra al pasar el mouse */
 }
